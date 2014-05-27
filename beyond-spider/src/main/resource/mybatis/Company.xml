@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.beyond.test.Company">  
+      
+    <!--可重用的SQL代码段-->  
+    <sql id="company_column">id,name</sql>  
+      
+    <select id="selectCompany"  parameterType="int" resultType="com.beyond.test.Company">  
+        select <include refid="company_column"/> from company where id = #{id}  
+    </select>  
+      
+</mapper> 
