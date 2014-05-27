@@ -1,5 +1,10 @@
 package com.beyond.entity.enums;
 
+/**
+ * 2014/5/27
+ * @author liangqingyu
+ *
+ */
 public enum ProviceEnum
 {
 	HUBEI("湖北省",42), 

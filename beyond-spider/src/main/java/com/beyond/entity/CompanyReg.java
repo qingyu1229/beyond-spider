@@ -2,6 +2,11 @@ package com.beyond.entity;
 
 import java.util.Date;
 
+/**
+ * 2014/5/26
+ * @author liangqingyu
+ *
+ */
 public class CompanyReg {
 	/**
 	 * 公司id

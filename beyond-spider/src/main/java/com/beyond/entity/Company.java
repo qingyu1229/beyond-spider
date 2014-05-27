@@ -2,6 +2,11 @@ package com.beyond.entity;
 
 import java.util.Date;
 
+/**
+ * 2014/5/26
+ * @author liangqingyu
+ *
+ */
 public class Company {
 	/**
 	 * 公司id
@@ -92,7 +97,14 @@ public class Company {
 	 */
 	private String paren_web;
 	
+	private int reg_id;
 	
+	public int getReg_id() {
+		return reg_id;
+	}
+	public void setReg_id(int reg_id) {
+		this.reg_id = reg_id;
+	}
 	public int getId() {
 		return id;
 	}
