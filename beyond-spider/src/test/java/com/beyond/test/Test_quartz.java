@@ -1,6 +1,5 @@
 package com.beyond.test;
 
-import com.beyond.quartz.SimpleExample;
 
 
 public class Test_quartz {
