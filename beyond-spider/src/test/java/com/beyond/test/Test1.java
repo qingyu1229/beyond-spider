@@ -9,7 +9,7 @@ public class Test1 {
 	
 	@Test
 	public void test(){
-		  Spider.create(new OschinaBlogPageProcesser()).addUrl("http://www.ic72.com/").thread(3)
-          .addPipeline(new ConsolePipeline()).run();
+		Spider.create(new HY88()).addUrl("http://jixie.huangye88.com/").thread(3)
+        .addPipeline(new ConsolePipeline()).run();
 	}
 }
