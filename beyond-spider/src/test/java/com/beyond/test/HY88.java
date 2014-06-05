@@ -36,7 +36,7 @@ public class HY88 implements PageProcessor
 	     //boolean bl= page.getHtml().links().regex("^http://.*\\.b2b.huangye88.com.*$").match();
 	     
 	     boolean bl =page.getRequest().getUrl().contains("b2b.huangye88.com");
-	     
+	      
 	     if(bl){
 	    	 System.out.println("-----------------url---"+page.getRequest().getUrl());
 	    	 String name= page.getHtml().xpath("//div[@class='introduce']/h3/text()").toString();
