@@ -3,7 +3,7 @@ package com.beyond.service.impl;
 import com.beyond.dao.CompanyDao;
 import com.beyond.entity.Company;
 import com.beyond.entity.CompanyReg;
-import com.beyond.entity.CrawlReg;
+import com.beyond.entity.WebsiteReg;
 import com.beyond.service.CompanyServiceDao;
 
 public class CompanyServiceDaoImpl implements CompanyServiceDao {
@@ -41,12 +41,12 @@ public class CompanyServiceDaoImpl implements CompanyServiceDao {
 	}
 
 	@Override
-	public CrawlReg getCrawlReg(int crawlreg_id) {
+	public WebsiteReg getCrawlReg(int crawlreg_id) {
 		return companyDao.getCrawlReg(crawlreg_id);
 	}
 
 	@Override
-	public int insertCrawlReg(CrawlReg crawlReg) {
+	public int insertCrawlReg(WebsiteReg crawlReg) {
 		return companyDao.insertCrawlReg(crawlReg);
 	}
 

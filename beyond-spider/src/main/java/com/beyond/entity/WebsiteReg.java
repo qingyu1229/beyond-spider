@@ -5,7 +5,7 @@ package com.beyond.entity;
  * @author liangqingyu
  *
  */
-public class CrawlReg {
+public class WebsiteReg {
 
 	/**
 	 * 网站主域名
@@ -19,7 +19,28 @@ public class CrawlReg {
 	 * 网址评分
 	 */
 	private Long rate;
+	/**
+	 * 对应的内容抓取规则ID
+	 */
+	private int reg_id;
 	
+	/**
+	 * 入口网址
+	 */
+	private String seed_url;
+	
+	public String getSeed_url() {
+		return seed_url;
+	}
+	public void setSeed_url(String seed_url) {
+		this.seed_url = seed_url;
+	}
+	public int getReg_id() {
+		return reg_id;
+	}
+	public void setReg_id(int reg_id) {
+		this.reg_id = reg_id;
+	}
 	public String getReg_domain() {
 		return reg_domain;
 	}

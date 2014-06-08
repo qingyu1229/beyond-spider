@@ -2,7 +2,7 @@ package com.beyond.service;
 
 import com.beyond.entity.Company;
 import com.beyond.entity.CompanyReg;
-import com.beyond.entity.CrawlReg;
+import com.beyond.entity.WebsiteReg;
 
 public interface CompanyServiceDao {
 
@@ -52,13 +52,13 @@ public interface CompanyServiceDao {
 	 * 获取抓取匹配规则
 	 * @return
 	 */
-	public CrawlReg getCrawlReg(int crawlreg_id);
+	public WebsiteReg getCrawlReg(int crawlreg_id);
 	
 	/**
 	 * 插入抓取匹配规则
 	 * @param crawlReg
 	 * @return
 	 */
-	public int insertCrawlReg(CrawlReg crawlReg);
+	public int insertCrawlReg(WebsiteReg crawlReg);
 	
 }

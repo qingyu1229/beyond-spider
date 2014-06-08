@@ -3,12 +3,15 @@ package com.beyond.dao.impl;
 import com.beyond.dao.CompanyDao;
 import com.beyond.entity.Company;
 import com.beyond.entity.CompanyReg;
-import com.beyond.entity.CrawlReg;
+import com.beyond.entity.WebsiteReg;
 
 public class CompanyDaoImpl implements CompanyDao {
 
 	@Override
 	public boolean addCompany(Company company) {
+		
+		
+		
 		
 		return false;
 	}
@@ -43,13 +46,13 @@ public class CompanyDaoImpl implements CompanyDao {
 	}
 
 	@Override
-	public CrawlReg getCrawlReg(int crawlreg_id) {
+	public WebsiteReg getCrawlReg(int crawlreg_id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public int insertCrawlReg(CrawlReg crawlReg) {
+	public int insertCrawlReg(WebsiteReg crawlReg) {
 		// TODO Auto-generated method stub
 		return 0;
 	}

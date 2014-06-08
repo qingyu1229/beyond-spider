@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.beyond.test.CompanyReg">  
+      
+    <!--可重用的SQL代码段-->  
+    <sql id="company_reg_column">company_reg_id,reg_name,reg_industry,reg_province,reg_city,
+    										reg_town,reg_linkman,reg_legalPerson,reg_main_products,reg_regDate,
+    										reg_regMoney,reg_mobilePhone,reg_telePhone,reg_address,reg_fax,webiste,
+    										reg_pro,reg_storeDate,reg_empCount,reg_turnover,webiste_id,reg_parent_web,
+    										reg_parent_web_name</sql>  
+      
+    <select id="selectCompanyRegByWebsiteId"  parameterType="int" resultType="com.beyond.test.CompanyReg">  
+        select <include refid="company_reg_column"/> from company_reg where website_id = #{id}  
+    </select>  
+    
+    
+      
+</mapper> 

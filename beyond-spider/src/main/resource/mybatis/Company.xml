@@ -7,8 +7,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     <!--可重用的SQL代码段-->  
     <sql id="company_column">id,name</sql>  
       
-    <select id="selectCompany"  parameterType="int" resultType="com.beyond.test.Company">  
+    <select id="selectCompanyById"  parameterType="int" resultType="com.beyond.test.Company">  
         select <include refid="company_column"/> from company where id = #{id}  
     </select>  
+    
+    
       
 </mapper> 

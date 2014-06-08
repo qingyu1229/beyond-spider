@@ -13,5 +13,9 @@
             </dataSource>  
         </environment>  
     </environments>  
-      <mappers> <mapper resource="mybatis/Company.xml"/> </mappers>  
+      <mappers> 
+      <mapper resource="mybatis/Company.xml"/>
+       <mapper resource="mybatis/CompanyReg.xml"/> 
+       </mappers>  
+       
 </configuration> 

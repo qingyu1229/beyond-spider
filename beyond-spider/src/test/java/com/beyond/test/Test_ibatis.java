@@ -10,7 +10,7 @@ import com.beyond.factory.MybatisConnectionFactory;
 
 public class Test_ibatis {
 	
-	@Test
+/*	@Test
 	public void t1(){
 		SqlSessionFactory sessionFactory= MybatisConnectionFactory.getSqlSessionFactory();
 		
@@ -20,5 +20,5 @@ public class Test_ibatis {
 		
 		System.out.println(list.get(0).getName());
 		session.close();
-	}
+	}*/
 }
