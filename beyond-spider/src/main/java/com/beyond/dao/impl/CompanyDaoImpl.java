@@ -1,19 +1,22 @@
 package com.beyond.dao.impl;
 
+import org.apache.ibatis.session.SqlSession;
+
 import com.beyond.dao.CompanyDao;
 import com.beyond.entity.Company;
 import com.beyond.entity.CompanyReg;
 import com.beyond.entity.WebsiteReg;
+import com.beyond.factory.MybatisConnectionFactory;
 
 public class CompanyDaoImpl implements CompanyDao {
 
 	@Override
 	public boolean addCompany(Company company) {
-		
-		
-		
-		
-		return false;
+		SqlSession session= MybatisConnectionFactory.getSession();
+		int c= session.insert("addCompany", company);
+		session.commit();
+		session.close();
+		return c>0;
 	}
 
 	@Override

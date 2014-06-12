@@ -23,7 +23,7 @@ public class Company {
 	/**
 	 * 公司所属省份
 	 */
-	private String provice;
+	private String province;
 	/**
 	 * 公司所属城市
 	 */
@@ -39,7 +39,7 @@ public class Company {
 	/**
 	 * 公司法人代表
 	 */
-	private String legalPersion;
+	private String legalPerson;
 	/**
 	 * 主营产品
 	 */
@@ -95,7 +95,9 @@ public class Company {
 	/**
 	 * 所属黄页
 	 */
-	private String paren_web;
+	private String parent_web;
+	
+	private String parent_web_name;
 	
 	private int reg_id;
 	
@@ -123,11 +125,12 @@ public class Company {
 	public void setIndustry(String industry) {
 		this.industry = industry;
 	}
-	public String getProvice() {
-		return provice;
+
+	public String getProvince() {
+		return province;
 	}
-	public void setProvice(String provice) {
-		this.provice = provice;
+	public void setProvince(String province) {
+		this.province = province;
 	}
 	public String getCity() {
 		return city;
@@ -148,11 +151,12 @@ public class Company {
 		this.linkman = linkman;
 	}
 	
-	public String getLegalPersion() {
-		return legalPersion;
+	
+	public String getLegalPerson() {
+		return legalPerson;
 	}
-	public void setLegalPersion(String legalPersion) {
-		this.legalPersion = legalPersion;
+	public void setLegalPerson(String legalPerson) {
+		this.legalPerson = legalPerson;
 	}
 	public String getMain_products() {
 		return main_products;
@@ -233,25 +237,21 @@ public class Company {
 	public void setWebsite_outerid(String website_outerid) {
 		this.website_outerid = website_outerid;
 	}
-	public String getParen_web() {
-		return paren_web;
+	public String getParent_web() {
+		return parent_web;
 	}
-	public void setParen_web(String paren_web) {
-		this.paren_web = paren_web;
+	public void setParent_web(String parent_web) {
+		this.parent_web = parent_web;
 	}
-	@Override
-	public String toString() {
-		return "Company [id=" + id + ", name=" + name + ", industry="
-				+ industry + ", provice=" + provice + ", city=" + city
-				+ ", town=" + town + ", linkman=" + linkman + ", legalPersion="
-				+ legalPersion + ", main_products=" + main_products
-				+ ", regDate=" + regDate + ", regMoney=" + regMoney
-				+ ", mobilePhone=" + mobilePhone + ", telePhone=" + telePhone
-				+ ", address=" + address + ", fax=" + fax + ", website="
-				+ website + ", pro=" + pro + ", storeDate=" + storeDate
-				+ ", empCount=" + empCount + ", turnover=" + turnover
-				+ ", website_outerid=" + website_outerid + ", paren_web="
-				+ paren_web + "]";
+	public String getParent_web_name() {
+		return parent_web_name;
 	}
+	public void setParent_web_name(String parent_web_name) {
+		this.parent_web_name = parent_web_name;
+	}
+	
+	
+
+
 	
 }

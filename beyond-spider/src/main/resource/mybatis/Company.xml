@@ -2,15 +2,22 @@
 <!DOCTYPE mapper  
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
-<mapper namespace="com.beyond.test.Company">  
+<mapper namespace="com.beyond.entity.Company">  
       
     <!--可重用的SQL代码段-->  
     <sql id="company_column">id,name</sql>  
       
-    <select id="selectCompanyById"  parameterType="int" resultType="com.beyond.test.Company">  
+    <select id="selectCompanyById"  parameterType="int" resultType="com.beyond.entity.Company">  
         select <include refid="company_column"/> from company where id = #{id}  
     </select>  
     
-    
+    <insert id="addCompany" parameterType="com.beyond.entity.Company">
+    	insert into company(name,industry,province,city,town,linkman,legalPerson,
+    	main_products,regDate,regMoney,mobilePhone,telePhone,address,fax,website,
+    	pro,storeDate,empCount,turnover,website_outerid,parent_web,parent_web_name)
+    	values(#{name},#{industry},#{province},#{city},#{town},#{linkman},#{legalPerson},
+    	#{main_products},#{regDate},#{regMoney},#{mobilePhone},#{telePhone},#{address},#{fax},#{website},
+    	#{pro},#{storeDate},#{empCount},#{turnover},#{website_outerid},#{parent_web},#{parent_web_name})
+    </insert>
       
 </mapper> 

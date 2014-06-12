@@ -9,7 +9,12 @@ public class Test1 {
 	
 	@Test
 	public void test(){
-		Spider.create(new HY88()).addUrl("http://jixie.huangye88.com/").thread(3)
+		long time1=System.currentTimeMillis();
+		Spider.create(new Ye56()).addUrl("http://qiye.56ye.net/").thread(10)
         .addPipeline(new ConsolePipeline()).run();
+		long time2=System.currentTimeMillis();
+		long s=(time2-time1)/1000;
+		long min=s/60;
+		System.out.println("耗时："+min+"分钟");
 	}
 }
