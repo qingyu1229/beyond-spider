@@ -60,4 +60,18 @@ public class CompanyDaoImpl implements CompanyDao {
 		return 0;
 	}
 
+	@Override
+	public boolean saveOrUpdateCompany(Company company) {
+		SqlSession session= MybatisConnectionFactory.getSession();
+		Company cp= session.selectOne("hasCompany", company);
+		if(cp!=null){
+			updateCompany( cp.consummateSelf(company));
+		}else{
+			addCompany(company);
+		}
+		session.commit();
+		session.close();
+		return false;
+	}
+
 }

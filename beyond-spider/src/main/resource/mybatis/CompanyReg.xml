@@ -12,9 +12,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     										reg_parent_web_name</sql>  
       
     <select id="getRegByWebsiteId"  parameterType="int" resultType="com.beyond.entity.CompanyReg">  
-        select <include refid="company_reg_column"/> from company_reg where website_id = #{id}  
+        select * from company_reg where website_id = #{id}  
     </select>  
     
+    <select id="getWebsiteReg"  parameterType="java.util.Map" resultType="com.beyond.entity.CompanyReg">  
+        select * from company_reg order by company_reg_id desc  limit #{begin} , #{count}
+    </select>  
     
       
 </mapper> 

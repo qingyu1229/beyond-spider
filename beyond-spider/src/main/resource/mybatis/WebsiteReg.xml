@@ -2,13 +2,8 @@
 <!DOCTYPE mapper  
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
-<mapper namespace="com.beyond.test.CompanyReg">  
+<mapper namespace="com.beyond.entity.CompanyReg">  
       
-    <!--可重用的SQL代码段-->  
-    <sql id="website_reg_column">reg_domain,reg_fetchurl,rate,seed_url,reg_id</sql>  
-      
-    <select id="getWebsiteReg"  parameterType="java.util.Map" resultType="com.beyond.test.WebsiteReg">  
-        select <include refid="website_reg_column"/> from website_reg order by rate desc limit #begin# , #count#  
-    </select>  
+
     
 </mapper> 

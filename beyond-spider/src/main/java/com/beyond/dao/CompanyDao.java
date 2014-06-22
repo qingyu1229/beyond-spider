@@ -13,6 +13,13 @@ public interface CompanyDao {
 	public boolean addCompany(Company company);
 	
 	/**
+	 * 保存或更新 根据公司名称查询，如果有这个公司的信息则更新，否则添加这条记录
+	 * @param company
+	 * @return
+	 */
+	public boolean saveOrUpdateCompany(Company company);
+	
+	/**
 	 * 查询数据库中是否已经存在此条记录
 	 * @param domain  主域名
 	 * @return ID

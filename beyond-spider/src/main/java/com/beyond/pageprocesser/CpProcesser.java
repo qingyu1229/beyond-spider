@@ -16,10 +16,12 @@ public class CpProcesser implements PageProcessor
 	private String fetch_url_reg;
 	private String parser_url_reg;
 	
-	public CpProcesser(Site site, CompanyReg cr)
+	public CpProcesser(Site site, CompanyReg cr,String fetch_url_reg , String parser_url_reg)
 	{
 		this.site = site;
 		this.cr = cr;
+		this.fetch_url_reg=fetch_url_reg;
+		this.parser_url_reg=parser_url_reg;
 	}
 
 	@Override
@@ -39,13 +41,9 @@ public class CpProcesser implements PageProcessor
 		 */
 		boolean bl =page.getRequest().getUrl().matches(parser_url_reg);
 		if(bl){
-			//page.getHtml().xpath(cr.getReg_name());
 			Company c= HtmlUtls.parserDataFromHTML(page.getHtml(), cr);
 			ServiceFactory.getCompanyService().addCompany(c);
 		}
-	/*	page.putField("title", page.getHtml().xpath("//div[@class='BlogEntity']/div[@class='BlogTitle']/h1/text()").toString());
-		page.putField("content", page.getHtml().xpath("//div[@class='BlogContent']/text()"));
-		page.putField("tags", page.getHtml().xpath("//div[@class='BlogTags']/a/text()").all());*/
 	}
 
 }

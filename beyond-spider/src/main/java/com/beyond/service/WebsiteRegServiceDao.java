@@ -2,7 +2,7 @@ package com.beyond.service;
 
 import java.util.List;
 
-import com.beyond.entity.WebsiteReg;
+import com.beyond.entity.CompanyReg;
 
 public interface WebsiteRegServiceDao {
 
@@ -12,5 +12,5 @@ public interface WebsiteRegServiceDao {
 	 * @param count
 	 * @return
 	 */
-	public List<WebsiteReg> getWebsiteReg(int begin,int count);
+	public List<CompanyReg> getWebsiteReg(int begin,int count);
 }

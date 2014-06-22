@@ -2,6 +2,8 @@ package com.beyond.entity;
 
 import java.util.Date;
 
+import org.apache.commons.lang.StringUtils;
+
 /**
  * 2014/5/26
  * @author liangqingyu
@@ -250,8 +252,61 @@ public class Company {
 		this.parent_web_name = parent_web_name;
 	}
 	
-	
+	public boolean isValidate(){
+		if(!StringUtils.isBlank(name)&&!StringUtils.isBlank(linkman)){
+			return true;
+		}
+		return false;
+	}
 
+	public Company consummateSelf(Company cp){
+		if(this.city==null&&cp.getCity()!=null){
+			this.city=cp.getCity();
+		}
+		if(this.address==null&&cp.getAddress()!=null){
+			this.address=cp.getAddress();
+		}
+		if(this.empCount==0&&cp.getEmpCount()!=0){
+			this.empCount=cp.getEmpCount();
+		}
+		if(this.fax==null&&cp.getFax()!=null){
+			this.fax=cp.getFax();
+		}
+		if(this.industry==null&&cp.getIndustry()!=null){
+			this.industry=cp.getIndustry();
+		}
+		if(this.legalPerson==null&&cp.getLegalPerson()!=null){
+			this.legalPerson=cp.getLegalPerson();
+		}
+		if(this.main_products==null&&cp.getMain_products()!=null){
+			this.main_products=cp.getMain_products();
+		}
+		if(this.mobilePhone==null&&cp.getMobilePhone()!=null){
+			this.mobilePhone=cp.getMobilePhone();
+		}
+		if(this.pro==null&&cp.getPro()!=null){
+			this.pro=cp.getPro();
+		}
+		if(this.province==null&&cp.getProvince()!=null){
+			this.province=cp.getPro();
+		}
+		if(this.regDate==null&&cp.getRegDate()!=null){
+			this.regDate=cp.getRegDate();
+		}
+		if(this.regMoney==0&&cp.getRegMoney()!=0){
+			this.regMoney=cp.getRegMoney();
+		}
+		if(this.telePhone==null&&cp.getTelePhone()!=null){
+			this.telePhone=cp.getTelePhone();
+		}
+		if(this.town==null&&cp.getTown()!=null){
+			this.town=cp.getTown();
+		}
+		if(this.turnover==0&&cp.getTurnover()!=0){
+			this.turnover=cp.getTurnover();
+		}
+		return this;
+	}
 
 	
 }
